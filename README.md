@@ -1,3 +1,3 @@
 ### Buraya Lanet Havuz Projelerini Koyuyorum.
 
-baslikta yaziyo zaten neden burayi okuyon aq
+baslikta yaziyo zaten neden burayi okuyon a.
