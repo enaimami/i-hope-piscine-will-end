@@ -1,13 +1,25 @@
-char	*ft_strcpy(char *dest,char *src)
-{
-	int	dumb;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdisbuda <mdisbuda@student.42kocaeli.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/17 01:18:17 by mdisbuda          #+#    #+#             */
+/*   Updated: 2025/11/17 01:18:18 by mdisbuda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	dumb = 0;
-	while(src[dumb] != '\0')
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
 	{
-		dest[dumb] = src[dumb];
-		dumb++;
+		dest[i] = src[i];
+		i++;
 	}
-	dest[dumb] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }

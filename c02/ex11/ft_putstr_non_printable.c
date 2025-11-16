@@ -1,36 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdisbuda <mdisbuda@student.42kocaeli.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/17 01:19:52 by mdisbuda          #+#    #+#             */
+/*   Updated: 2025/11/17 01:19:53 by mdisbuda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_putchar(char b)
+void	ft_putchar(char b)
 {
-    write(1,&b,1);
+	write(1, &b, 1);
 }
 
-void ft_write_hex(unsigned char a)
+void	ft_write_hex(unsigned char a)
 {
-    char mod;
-    char div;
-    char *allhexs;
+	char	*allhexs;
 
-    allhexs = "0123456789abcdef";
-    ft_putchar('\\');
-    ft_putchar(allhexs[a/16]);
-    ft_putchar(allhexs[a%16]);
+	allhexs = "0123456789abcdef";
+	ft_putchar('\\');
+	ft_putchar(allhexs[a / 16]);
+	ft_putchar(allhexs[a % 16]);
 }
 
-void        ft_putstr_non_printable(char *str)
+void	ft_putstr_non_printable(char *str)
 {
-    int     i;
+	int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if(!(str[i] >= 32 && str[i] <= 126))
-        {
-            ft_write_hex(str[i]);
-            i++;
-            continue;
-        }
-        write(1, &str[i], 1);
-        i++;
-    }
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= 32 && str[i] <= 126))
+		{
+			ft_write_hex((unsigned char)str[i]);
+			i++;
+			continue ;
+		}
+		write(1, &str[i], 1);
+		i++;
+	}
 }

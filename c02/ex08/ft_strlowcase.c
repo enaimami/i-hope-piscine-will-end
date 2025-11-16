@@ -1,16 +1,27 @@
-char    *ft_strlowcase(char *str)
-{
-    int     i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdisbuda <mdisbuda@student.42kocaeli.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/17 01:19:06 by mdisbuda          #+#    #+#             */
+/*   Updated: 2025/11/17 01:19:07 by mdisbuda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while(str[i] != '\0')
-    {
-        if(str[i] >= 'A' && str[i] <= 'Z')
-        {
-            str[i] = str[i] + 32;
-        }
-        i++;
-    }
-    
-    return(str);
+char	*ft_strlowcase(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] = str[i] + 32;
+		}
+		i++;
+	}
+	return (str);
 }
